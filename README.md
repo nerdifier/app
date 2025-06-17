@@ -1,2 +1,2 @@
-# app
-The only app you need to LOCK IN 🔒.
+# NERDIFIER
+## The only application you need to LOCK IN 🔒.

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+OH LOOK WHO IT IS! ITS THE NERD WHO LOOKED AT THE SOURCE CODE!
+IF YOU ARE HERE TO STEAL MY CODE, I SUGGEST YOU DO NOT DO IT.
+
+im kidding, but seriously, if you are here to steal, dont.
+If you are here to learn, then welcome! I hope you find this code useful.
+If you are here to report a bug, then please do so on the GitHub repository.
+else 
+break
+
+but im proud of you for looking at the code. join the discord as a bonus for finding it!
+https://discord.gg/yjAFj3Csbh
+
+have fun nerding out!
+-->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Nerdifier</title>
+        <link rel="preload" href="./res/fon/NotoSans-Medium.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/twemoji-amazing.css">
+    </head>
+    <body>
+        <div class="topnav"> <!-- NERDIFIER    time -->
+            <div class="logo">
+                <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="55" height="55">
+                <h1>Nerdifier</h1>
+                <h3>v0.0.0.1</h3>
+            </div>
+            <div class="time" id="currentTime"></div>
+        </div> <!-- arrow, home, shop, statistics, timers        account, settings -->
+        <div class="sidenav">
+            <div class="menu">
+                <a id="home" href="index.html">🏠</a>
+                <a id="shop" href="shop.html">🛒</a>
+                <a id="stats" href="stats.html">📊</a>
+                <a id="timer" href="timer.html">⏳</a>
+                <a id="music" href="music.html">🎵</a>
+            </div>
+            <div class="user">
+                <a id="profile" href="profile.html">🧑🏻</a>
+                <a id="settings" href="settings.html">⚙️</a>
+            </div>
+        </div>
+        <div class="page">
+            <div class="overview"> <!-- sideways container skewed left -->
+                <div class="pie-chart">
+                    <canvas id="myPieChart" width="400" height="400"></canvas>
+                </div> <!--pie chart -->
+                <div class="overview-details">
+                    <div class="greeting"></div> <!-- greeting -->
+                    <div class="time-spent-studying"></div> <!-- time spent studying -->
+                    <div class="xp"></div> <!-- level -->
+                    <div class="points"></div> <!-- points -->
+                </div>
+            </div> <!-- pie chart, greeting, time spent studying, xp, points -->
+            <div class="page-details"> <!-- home tasks and timers container. (oriented sideways) -->
+                <div class="tasks"> <!-- sidewayss -->
+                    <div class="ta-checkboxes"></div>
+                    <div class="ta-time"></div>
+                </div>
+                <div class="timers"> <!-- sideways -->
+                    <div class="ti-start"></div>
+                    <div class="ti-time"></div>
+                </div>
+                </div>
+        </div>
+        <script src="./js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </body>
+</html>
