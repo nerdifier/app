@@ -18,31 +18,43 @@ have fun nerding out!
     <head>
         <meta charset="UTF-8" />
         <title>Nerdifier</title>
-        <link rel="preload" href="./res/fon/NotoSans-Medium.ttf" as="font" type="font/ttf" crossorigin>
+        <meta name="google-site-verification" content="google-site-verification=w-eolqtpvdssf3WLWqLo9YambEeGQOFSIulqQ_gO-oY" />
+        <link rel="preload" href="./res/fon/Consolas.TTF" as="font" type="font/ttf" crossorigin>
         <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/twemoji-amazing.css">
         <link rel="icon" href="./res/svg/logo.svg" type="image/svg+xml">
     </head>
     <body>
-        <div class="first-load">
-            
+        <div class="first-load" id="first-load-id">
+            <div class="user-info">
+                <h1>Hiii!</h1>
+                <p>We need a few bits of information to make this experience <i>GOOOOOOOD.</i>
+                    <br>Care to give us some information?
+                    <br>
+                    <br>
+                    <span class="user-info-sub">p.s. The information is stored only in your browser unless you decide otherwise.</span></p>
+                <input type="text" id="username" placeholder="Username..." required>
+                <input type="text" id="bio" placeholder="Bio...">
+                <input type="text" id="education" placeholder="Institute of Education..." required>
+                <input type="number" min="00" max="99" step="1" maxlength="2" id="batch" placeholder="Batch..." required>
+                <button id="save-button">Save</button>
+            </div>
         </div>
         <div class="topnav"> <!-- NERDIFIER    time -->
             <div class="logo">
                 <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="50" height="50">
                 <h1>Nerdifier</h1>
-                <h3>v0.0.0.2</h3>
+                <h3 class="logo-h3">v0.0.0.3</h3>
             </div>
             <div class="time" id="currentTime"></div>
         </div> <!-- arrow, home, shop, statistics, timers        account, settings -->
         <div class="sidenav">
             <div class="menu">
-                <a id="home" class="sidenav-icons" href="index.html"><img src="./res/svg/home.svg" width="50" height="50"></a>
-                <a id="shop" class="sidenav-icons" href="shop.html"><img src="./res/svg/shop.svg" width="50" height="50"></a>
+                <a id="home" class="sidenav-icons" href="index.html" ><img src="./res/svg/home.svg"  width="50" height="50"></a>
+                <a id="shop" class="sidenav-icons" href="shop.html"  ><img src="./res/svg/shop.svg"  width="50" height="50"></a>
                 <a id="timer" class="sidenav-icons" href="timer.html"><img src="./res/svg/timer.svg" width="50" height="50"></a>
-                <a id="tasks" class="sidenav-icons" href="tasks.html"><img src="./res/svg/tasks.svg" width="50" height="50"></a>
+                <a id="tasks" class="sidenav-icons" href="schedules.html"><img src="./res/svg/schedules.svg" width="50" height="50"></a>
                 <a id="music" class="sidenav-icons" href="music.html"><img src="./res/svg/music.svg" width="50" height="50"></a>
-                <a id="notes" class="sidenav-icons" href="notes.html"><img src="./res/svg/notes.svg" width="50" height="50"></a>
+                <a id="notes" class="sidenav-icons" href="notes.html"><img class="sidenav-icons-notes" src="./res/svg/notes.svg" width="50" height="50"></a>
             </div>
             <div class="user">
                 <a id="achievements" class="sidenav-icons" href="achievements.html"><img src="./res/svg/achievements.svg" width="50" height="50"></a>
@@ -52,17 +64,35 @@ have fun nerding out!
             </div>
         </div>
         <div class="page">
-            <div class="overview"> <!-- pie chart, greeting, time spent studying, xp, points -->
-                <div class="pie-chart"> <!--pie chart -->
-                    <canvas id="myPieChart" width="400" height="400"></canvas>
-                </div> 
+            <div class="overview"> <!-- pie chart, greeting, time spent studying, xp, glasses -->
+                <div></div>
+                <div class="overlay-pies">
+                    <div class="pie-xp"> <!--pie chart -->
+                        <canvas id="pie-xp" width="300" height="300"></canvas> <!--xp-->
+                    </div>
+                    <div class="pie-study-goal"> <!--pie chart -->
+                        <canvas id="pie-study-goal" width="280" height="280"></canvas> <!--study goal completion percentage-->
+                    </div>
+                    <div class="pie-task-goal"> <!--pie chart -->
+                        <canvas id="pie-task-goal" width="220" height="220"></canvas> <!--task completion percentage-->
+                    </div>
+                    <div class="time-on-focus"> <!--division -->
+                        <h1>
+                            <span></span>
+                        </h1>
+                    </div>
+                </div>
+                <div style="width:1px; height:85%; background-color:#333; display:inline-block;"></div>
                 <div class="overview-details">
                     <div class="greeting">
-                        <h1>Welcome, `${username}`</h1>
+                        <h1>Welcome, <span id="greet-user-name"></span></h1>
                     </div> <!-- greeting -->
-                    <div class="time-spent-studying"></div> <!-- time spent studying -->
-                    <div class="xp"></div> <!-- level -->
-                    <div class="points"></div> <!-- points -->
+                    <div class="level">
+                        <h2><img src="./res/svg/xp-level.svg" width="30px" height="30px"><span></span></h2>
+                    </div> <!-- level -->
+                    <div class="glasses">
+
+                    </div> <!-- currency: glasses -->
                 </div>
             </div> 
             <div class="page-details"> <!-- home tasks and timers container. (oriented sideways) -->
@@ -80,7 +110,7 @@ have fun nerding out!
                 </div>
             </div>
         </div>
+        <script src="./js/chart.js"></script>
         <script src="./js/index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </body>
 </html>
