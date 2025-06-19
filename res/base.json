@@ -1,0 +1,12 @@
+{
+	"userInit": {
+		"level": 0,
+		"xp": 0,
+		"nextLevelXp": 100,
+		"glasses": 0
+	},
+	"settings": {
+		"theme": "midnight",
+		"presence": false
+	}
+}

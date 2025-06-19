@@ -220,51 +220,98 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 10%;
+    justify-content: flex-start;
+    gap: 0;
     position: relative;
 }
 
-.overlay-pies {
-    position: fixed;
-    top: 75px; left: 75px;
-    width: 300px; height: 300px;
-    margin: 20.3195px 121.5px;
+.pie-charts-area {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.pie-charts-container {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    display: block;
+}
+
+.pie-xp,
+.pie-study-goal,
+.pie-task-goal,
+.time-on-focus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 .pie-xp {
-    position: fixed;
-    top: 75px; left: 75px;
-    width: 300px; height: 300px;
-    margin: 10.3195px 111px;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
 }
 
 .pie-study-goal {
-    position: fixed;
-    top: 75px; left: 75px;
-    width: 280px; height: 280px;
-    margin: 20.3195px 121px;
+    width: 280px;
+    height: 280px;
+    z-index: 2;
 }
 
 .pie-task-goal {
-    position: fixed;
-    top: 75px; left: 75px;
-    width: 220px; height: 220px;
-    margin: 50.3195px 151px;
+    width: 220px;
+    height: 220px;
+    z-index: 3;
 }
 
 .time-on-focus {
-    position: fixed;
-    top: 75px; left: 75px;
-    width: 140px; height: 140px;
-    margin: 90.3195px 191px;
+    width: 140px;
+    height: 140px;
     background-color: #000;
     border-radius: 50%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.page-details {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-details{
     width: 100%;
     height: 100%;
+    z-index: 4;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -275,8 +322,22 @@ input[type="number"]::-webkit-outer-spin-button {
     width: calc((100% / 3) + 1px);
     height: 100%;
     border-right: 1px solid #333;
-    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.tasks hr {
+    width: 90%;
+    border: 1px solid #333;
+    margin: 0 5%;
+    align-self: center;
+}
+
+.ta-title {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -285,7 +346,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: calc((100% / 3) + 1px);
     height: 100%;
     border-right: 1px solid #333;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -294,7 +354,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .music {
     width: calc((100% / 3) + 1px);
     height: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
