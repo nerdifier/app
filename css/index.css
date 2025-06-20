@@ -351,10 +351,38 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
 }
 
+.timers hr {
+    width: 90%;
+    border: 1px solid #333;
+    margin: 0 5%;
+    align-self: center;
+}
+
+.ti-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .music {
     width: calc((100% / 3) + 1px);
     height: 100%;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music hr {
+    width: 90%;
+    border: 1px solid #333;
+    margin: 0 5%;
+    align-self: center;
+}
+
+.mu-title {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -364,10 +392,20 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
 }
 
+.nav-time-notiff {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
 .time {
     color: #ebebdd;
     font-family: Consolas, monospace;
     font-size: 20px;
     font-weight: 600;
     margin-right: 20px;
+    justify-content: center;
+    align-items: center;
 }
