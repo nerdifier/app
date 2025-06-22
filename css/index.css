@@ -195,8 +195,8 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #ebebdd;
 }
 
-.sidenav-icons-notes {
-    transform: scale(1.2);
+.sidenav-icon-img {
+    transform: scale(0.75)
 }
 
 /* content area */
@@ -255,7 +255,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .pie-xp {
     width: 300px;
     height: 300px;
-    z-index: 1;
+    border-radius: 50%;
+    background: conic-gradient(#aef359, 180deg, #000, 180deg);
+    z-index: 1000;
 }
 
 .pie-study-goal {
@@ -299,7 +301,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-
+.level {
+    align-items: top;
+    justify-content: top;
+}
 
 
 

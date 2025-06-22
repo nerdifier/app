@@ -42,35 +42,35 @@ have fun nerding out!
             <div class="logo">
                 <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="50" height="50">
                 <h1>Nerdifier</h1>
-                <h3 class="logo-h3">v0.0.0.5</h3>
+                <h3 class="logo-h3">v0.0.0.6</h3>
             </div>
             <div class="nav-time-notiff">
-                <img src="./res/svg/notifications.svg" alt="Notifications" width="30" height="30">&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="res\svg\sidenav\notifications.svg" alt="Notifications" width="30" height="30">&nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="time" id="currentTime"></div>
             </div>
         </div> <!-- arrow, home, shop, statistics, timers        account, settings -->
         <div class="sidenav">
             <div class="menu">
-                <a id="home" class="sidenav-icons" href="index.html" ><img src="./res/svg/home.svg"  width="50" height="50"></a>
-                <a id="shop" class="sidenav-icons" href="shop.html"  ><img src="./res/svg/shop.svg"  width="50" height="50"></a>
-                <a id="timer" class="sidenav-icons" href="timer.html"><img src="./res/svg/timer.svg" width="50" height="50"></a>
-                <a id="tasks" class="sidenav-icons" href="schedules.html"><img src="./res/svg/schedules.svg" width="50" height="50"></a>
-                <a id="music" class="sidenav-icons" href="music.html"><img src="./res/svg/music.svg" width="50" height="50"></a>
-                <a id="notes" class="sidenav-icons" href="notes.html"><img class="sidenav-icons-notes" src="./res/svg/notes.svg" width="50" height="50"></a>
+                <a id="home" class="sidenav-icons" href="index.html" ><img class="sidenav-icon-img" src="res\svg\sidenav\home.svg"  width="50" height="50"></a>
+                <a id="shop" class="sidenav-icons" href="shop.html"  ><img class="sidenav-icon-img" src="res\svg\sidenav\shop.svg"  width="50" height="50"></a>
+                <a id="timer" class="sidenav-icons" href="timer.html"><img class="sidenav-icon-img" src="res\svg\sidenav\timer.svg" width="50" height="50"></a>
+                <a id="tasks" class="sidenav-icons" href="schedules.html"><img class="sidenav-icon-img" src="res\svg\sidenav\schedules.svg" width="50" height="50"></a>
+                <a id="music" class="sidenav-icons" href="music.html"><img class="sidenav-icon-img" src="res\svg\sidenav\music.svg" width="50" height="50"></a>
+                <a id="notes" class="sidenav-icons" href="notes.html"><img class="sidenav-icon-img" src="res\svg\sidenav\notes.svg" width="50" height="50"></a>
             </div>
             <div class="user">
-                <a id="achievements" class="sidenav-icons" href="achievements.html"><img src="./res/svg/achievements.svg" width="50" height="50"></a>
-                <a id="profile" class="sidenav-icons" href="profile.html"><img src="./res/svg/profile.svg" width="50" height="50"></a>
-                <a id="stats" class="sidenav-icons" href="stats.html"><img src="./res/svg/stats.svg" width="50" height="50"></a>
-                <a id="settings" class="sidenav-icons" href="settings.html"><img src="./res/svg/settings.svg" width="50" height="50"></a>
+                <a id="achievements" class="sidenav-icons" href="achievements.html"><img class="sidenav-icon-img" src="res\svg\sidenav\achievements.svg" width="50" height="50"></a>
+                <a id="profile" class="sidenav-icons" href="profile.html"><img class="sidenav-icon-img" src="res\svg\sidenav\profile.svg" width="50" height="50"></a>
+                <a id="stats" class="sidenav-icons" href="stats.html"><img class="sidenav-icon-img" src="res\svg\sidenav\stats.svg" width="50" height="50"></a>
+                <a id="settings" class="sidenav-icons" href="settings.html"><img class="sidenav-icon-img" src="res\svg\sidenav\settings.svg" width="50" height="50"></a>
             </div>
         </div>
         <div class="page">
             <div class="overview"> <!-- pie chart, greeting, time spent studying, xp, glasses -->
                 <div class="pie-charts-area">
                     <div class="pie-charts-container">
-                        <div class="pie-xp"> <!--pie chart -->
-                            <canvas id="pie-xp" width="300" height="300"></canvas> <!--xp-->
+                        <div class="pie-xp" id="pie-xp"> <!--pie chart -->
+                            <!--<canvas id="pie-xp" width="300" height="300"></canvas> xp-->
                         </div>
                         <div class="pie-study-goal"> <!--pie chart -->
                             <canvas id="pie-study-goal" width="280" height="280"></canvas> <!--study goal completion percentage-->
@@ -91,7 +91,7 @@ have fun nerding out!
                         <h1>Welcome, <span id="greet-user-name"></span>.</h1>
                     </div> <!-- greeting -->
                     <div class="level">
-                        <h2><img src="./res/svg/xp-level.svg" width="30px" height="30px"><span id="level"></span></h2>
+                        <h2><img src="./res/svg/xp-level.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;<span id="level"></span></h2>
                     </div> <!-- level -->
                     <div class="glasses">
                         <h2><img src="./res/svg/glasses.svg" width="30px" height="30px"><span id="glasses-count"></span></h2>
@@ -101,30 +101,32 @@ have fun nerding out!
             <div class="page-details"> <!-- home tasks and timers container. (oriented sideways) -->
                 <div class="tasks"> <!-- sidewayss -->
                     <div class="ta-title">
-                        <img src="./res/svg/tasks.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="res\svg\tasks\tasks.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
                         <h2>TO - DO</h2>
                     </div>
                     <hr>
                 </div>
                 <div class="timers"> <!-- sideways -->
                     <div class="ti-title">
-                        <img src="./res/svg/timer.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="res\svg\sidenav\timer.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
                         <h2>TIMERS</h2>
                     </div>
                     <hr>
                 </div>
                 <div class="music">
                     <div class="mu-title">
-                        <img src="./res/svg/music.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="res\svg\sidenav\music.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
                         <h2>MUSIC</h2>
                     </div>
                     <hr>
                 </div>
             </div>
         </div>
-        <script src="./js/topnav-time.js"></script>
-        <script src="./js/index/chart.js"></script>
-        <script src="./js/index/home-pies.js"></script>
-        <script src="./js/index/index.js"></script>
+        <script src="js\globals.js" defer></script>
+        <script src="./js/index/apexcharts.js" defer></script>
+        <script src="./js/index/home-pies.js" defer></script>
+        <script src="./js/topnav-time.js" defer></script>
+        <script src="./js/index/index.js"defer></script>
+        <script src="./js/index/levelling.js" defer></script>
     </body>
 </html>
