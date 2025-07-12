@@ -1,0 +1,108 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe 
+    src="https://www.googletagmanager.com/ns.html?id=GTM-TQZXJBBN" 
+    height="0" 
+    width="0" 
+    style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8QMXCQR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<link rel="stylesheet" href="./css/home.css">
+
+
+<div class="first-load" id="first-load-id">
+    <div class="user-info">
+        <h1>Hiii!</h1>
+        <p>We need a few bits of information to make this experience <i>GOOOOOOOD.</i>
+            <br>Care to give us some information?
+            <br>
+            <br>
+            <span class="user-info-sub">p.s. The information is stored only in your browser unless you decide otherwise.</span></p>
+        <input type="text" id="username" placeholder="Username..." required>
+        <input type="text" id="bio" placeholder="Bio...">
+        <input type="text" id="education" placeholder="Institute of Education..." required>
+        <input  type="text" maxlength="2" pattern="\d{1,2}" inputmode="numeric" id="batch" placeholder="Batch..." required>
+        <button id="save-button">Save</button>
+    </div>
+</div>
+<div class="topnav"> <!-- NERDIFIER    time -->
+    <div class="logo">
+        <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="50" height="50">
+        <h1>Nerdifier</h1>
+        <h3 class="logo-h3">v0.0.0.7</h3>
+    </div>
+    <div class="nav-time-notiff">
+        <img src="res\svg\sidenav\notifications.svg" alt="Notifications" width="30" height="30">&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="time" id="currentTime"></div>
+    </div>
+</div> <!-- arrow, home, shop, statistics, timers        account, settings -->
+<div class="sidenav">
+    <div class="menu">
+        <a id="home" class="sidenav-icons" href="home.html" ><img class="sidenav-icon-img" src="res\svg\sidenav\home.svg"  width="50" height="50"></a>
+        <a id="shop" class="sidenav-icons" href="shop.html"  ><img class="sidenav-icon-img" src="res\svg\sidenav\shop.svg"  width="50" height="50"></a>
+        <a id="timer" class="sidenav-icons" href="timer.html"><img class="sidenav-icon-img" src="res\svg\sidenav\timer.svg" width="50" height="50"></a>
+        <a id="tasks" class="sidenav-icons" href="schedules.html"><img class="sidenav-icon-img" src="res\svg\sidenav\schedules.svg" width="50" height="50"></a>
+        <a id="music" class="sidenav-icons" href="music.html"><img class="sidenav-icon-img" src="res\svg\sidenav\music.svg" width="50" height="50"></a>
+        <a id="notes" class="sidenav-icons" href="notes.html"><img class="sidenav-icon-img" src="res\svg\sidenav\notes.svg" width="50" height="50"></a>
+    </div>
+    <div class="user">
+        <a id="achievements" class="sidenav-icons" href="achievements.html"><img class="sidenav-icon-img" src="res\svg\sidenav\achievements.svg" width="50" height="50"></a>
+        <a id="profile" class="sidenav-icons" href="profile.html"><img class="sidenav-icon-img" src="res\svg\sidenav\profile.svg" width="50" height="50"></a>
+        <a id="stats" class="sidenav-icons" href="stats.html"><img class="sidenav-icon-img" src="res\svg\sidenav\stats.svg" width="50" height="50"></a>
+        <a id="settings" class="sidenav-icons" href="settings.html"><img class="sidenav-icon-img" src="res\svg\sidenav\settings.svg" width="50" height="50"></a>
+    </div>
+</div>
+<div class="page">
+    <div class="overview"> <!-- pie chart, greeting, time spent studying, xp, glasses -->
+        <div class="pie-charts-area">
+            <div class="pie-charts-container">
+                <canvas id="homepies" class="home-pies" width="300" height="300"></canvas>
+            </div>
+        </div>
+        <div class="vertical-divider"></div>
+        <div class="overview-right">
+            <div class="greeting">
+                <h1>Welcome, <span id="greet-user-name"></span>.</h1>
+            </div> <!-- greeting -->
+            <div class="level">
+                <h2><img src="./res/svg/xp-level.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;<span id="level"></span></h2>
+            </div> <!-- level -->
+            <div class="glasses">
+                <h2><img src="./res/svg/glasses.svg" width="30px" height="30px"><span id="glasses-count"></span></h2>
+            </div> <!-- currency: glasses -->
+        </div>
+    </div> 
+    <div class="page-details"> <!-- home tasks and timers container. (oriented sideways) -->
+        <div class="tasks"> <!-- sidewayss -->
+            <div class="ta-title">
+                <img src="res\svg\tasks\tasks.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                <h2>TO - DO</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="timers"> <!-- sideways -->
+            <div class="ti-title">
+                <img src="res\svg\sidenav\timer.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                <h2>TIMERS</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="music">
+            <div class="mu-title">
+                <img src="res\svg\sidenav\music.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                <h2>MUSIC</h2>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<script type="module" src="js/main.js"></script>
