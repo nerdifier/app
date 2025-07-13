@@ -1,7 +1,8 @@
 // bootap
 import { bootApp } from './core/init.js';
 
-window.addEventListener('DOMContentLoaded', bootApp)
+window.addEventListener('DOMContentLoaded', bootApp);
+window.addEventListener('popstate', bootApp);
 
 // page finder
 const scriptTag =

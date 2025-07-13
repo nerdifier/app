@@ -1,35 +1,19 @@
-import { loadPage } from './router.js';
-
-export function bootApp() {
-    //get current path
-    const path = window.location.pathname;
-
-    if (path === '/' || path === '/index.html') {
-        history.replaceState({}, '', '/home');
-        loadPage('home.html', 'Home');
-        return;
-    }
-
-    if (path === '/home') {
-        loadPage('home.html', 'Home');
-    } else if (path === '/about') {
-        loadPage('about.html', 'About');
-    } else if (path === '/achievements') {
-        loadPage('achievements.html', 'Achievements');
-    } else {
-        // fallback
-        history.replaceState({}, '', '/home');
-        loadPage('home.html', 'Home');
-    }
+export function loadPage(fragmentUrl, pageTitle) {
+    fetch(fragmentUrl)
+        .then(res => res.text())
+        .then(html => {
+            document.querySelector('#page1').innerHTML = html;
+            document.title = pageTitle;
+        })
+        .catch(err => {
+            console.error('Fragment load failed:', err);
+            document.querySelector('#page1').innerHTML = '<p>Page not found.</p>';
+        });
 }
 
 export function navigateTo(path) {
     history.pushState({}, '', path);
-    if (path === '/home') {
-        loadPage('home.html', 'Nerdifier');
-    } else if (path === '/achievements') {
-        loadPage('achievements.html', 'Nerdifier');
-    }
+    window.dispatchEvent(new PopStateEvent('popstate'));
 }
 
 window.addEventListener('popstate', event => {
