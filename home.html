@@ -38,27 +38,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="logo">
         <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="50" height="50">
         <h1>Nerdifier</h1>
-        <h3 class="logo-h3">v0.0.0.7</h3>
+        <h3 class="logo-h3">v0.0.0.8</h3>
     </div>
     <div class="nav-time-notiff">
-        <img src="res\svg\sidenav\notifications.svg" alt="Notifications" width="30" height="30">&nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="notifications" class="topnav-icons"><img src="res\svg\sidenav\notifications.svg" alt="Notifications" width="30" height="30"></a>&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="time" id="currentTime"></div>
+        <a id="profileSettings" class="topnav-icons"><img class="sidenav-icon-img" src="res\svg\sidenav\profile.svg" width="42" height="42"></a>
     </div>
 </div> <!-- arrow, home, shop, statistics, timers        account, settings -->
 <div class="sidenav">
     <div class="menu">
-        <a id="home"            class="sidenav-icons" href="/home"          onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\home.svg"           width="50" height="50"></a>
-        <a id="shop"            class="sidenav-icons" href="/shop"          onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\shop.svg"           width="50" height="50"></a>
-        <a id="timer"           class="sidenav-icons" href="/timer"         onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\timer.svg"          width="50" height="50"></a>
-        <a id="tasks"           class="sidenav-icons" href="/schedules"     onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\schedules.svg"      width="50" height="50"></a>
-        <a id="music"           class="sidenav-icons" href="/music"         onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\music.svg"          width="50" height="50"></a>
-        <a id="notes"           class="sidenav-icons" href="/notes"         onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\notes.svg"          width="50" height="50"></a>
+        <a id="home"        class="sidenav-icons" href="#" data-fragment="home.html"        ><img class="sidenav-icon-img" src="res\svg\sidenav\home.svg"           width="50" height="50"></a>
+        <a id="shop"        class="sidenav-icons" href="#" data-fragment="shop.html"        ><img class="sidenav-icon-img" src="res\svg\sidenav\shop.svg"           width="50" height="50"></a>
+        <a id="timer"       class="sidenav-icons" href="#" data-fragment="timer.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\timer.svg"          width="50" height="50"></a>
+        <a id="tasks"       class="sidenav-icons" href="#" data-fragment="schedules.html"   ><img class="sidenav-icon-img" src="res\svg\sidenav\schedules.svg"      width="50" height="50"></a>
+        <a id="music"       class="sidenav-icons" href="#" data-fragment="music.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\music.svg"          width="50" height="50"></a>
+        <a id="notes"       class="sidenav-icons" href="#" data-fragment="notes.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\notes.svg"          width="50" height="50"></a>
     </div>
     <div class="user">
-        <a id="achievements"    class="sidenav-icons" href="/achievements"  onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\achievements.svg"   width="50" height="50"></a>
-        <a id="profile"         class="sidenav-icons" href="/profile"       onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\profile.svg"        width="50" height="50"></a>
-        <a id="stats"           class="sidenav-icons" href="/stats"         onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\stats.svg"          width="50" height="50"></a>
-        <a id="settings"        class="sidenav-icons" href="/settings"      onclick="event.preventDefault(); history.pushState({}, '', '/home'); bootApp();"><img class="sidenav-icon-img" src="res\svg\sidenav\settings.svg"       width="50" height="50"></a>
+        <a id="achievements"class="sidenav-icons" href="#" data-fragment="achievements.html"><img class="sidenav-icon-img" src="res\svg\sidenav\achievements.svg"   width="50" height="50"></a>
+        <a id="stats"       class="sidenav-icons" href="#" data-fragment="stats.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\stats.svg"          width="50" height="50"></a>
     </div>
 </div>
 <div class="page">

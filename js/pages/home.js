@@ -4,7 +4,7 @@ import {
     checkFirstVisit
 } from '../components/user.js';
 
-import { renderCharts } from '../components/charts.js';
+import { renderCharts } from '../components/chartrender.js';
 
 export function initHomePage() {
     checkFirstVisit();

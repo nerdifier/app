@@ -1,22 +1,27 @@
-export const reactiveState = {
-    exp: 0,
-    level: 0,
-    expToNextLevel: 100
-};
+import { renderCharts } from "./chartrender.js";
 
-export function addExp(amount) {
-    reactiveState.exp += amount;
+var exp = 0;
+var expMax = 100;
+var level = 0;
+
+export function updateExp() {
+    while (exp >= expMax) {
+        level ++;
+        exp -= expMax;
+        expMax *= 1.2;
+        expMax = Math.floor(expMax)
+        const dispLevel = document.getElementById('level');
+        dispLevel.textContent = level;
+    }
+    renderCharts();
+}
+
+export function addExp(experience) {
+    exp += experience;
     updateExp();
 }
 
-export function updateExp() {
-    while (reactiveState.exp >= reactiveState.expToNextLevel) {
-        reactiveState.exp -= reactiveState.expToNextLevel;
-        reactiveState.level++;
-        reactiveState.expToNextLevel = Math.floor(reactiveState.expToNextLevel * 1.2);
-    }
-    const levelEl = document.getElementById('level');
-    if (levelEl) {
-        levelEl.innerText = reactiveState.level;
-    }
+export function getExpPercent() {
+    const expPercent = (exp / expMax) * 100;
+    return expPercent;
 }

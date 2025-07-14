@@ -1,8 +1,16 @@
 // bootap
 import { bootApp } from './core/init.js';
+import { clearAllUserData } from './components/user.js';
+import { setupNavigation } from './components/navigation.js';
+import { addExp } from './components/exp.js';
 
-window.addEventListener('DOMContentLoaded', bootApp);
-window.addEventListener('popstate', bootApp);
+window.clearAllUserData = clearAllUserData;
+window.addExp = addExp;
+
+window.addEventListener('DOMContentLoaded', () => {
+    bootApp();
+    setupNavigation();
+});
 
 // page finder
 const scriptTag =
