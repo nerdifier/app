@@ -17,3 +17,27 @@ button {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
+/*========================================
+||            LOADING SCREEN            ||
+========================================*/
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /*transition: opacity 0.4s ease;*/
+}
