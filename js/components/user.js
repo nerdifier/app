@@ -38,12 +38,9 @@ export function checkFirstVisit() {
 export function clearAllUserData() {
     localStorage.clear();
 
-    // Optional: visually reflect the reset state
     document.querySelectorAll('.first-load')
         .forEach(el => el.style.display = 'block');
 
     const greet = document.getElementById('greet-user-name');
     if (greet) greet.textContent = '';
-
-    alert('All data cleared.');
 }
