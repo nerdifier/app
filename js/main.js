@@ -4,6 +4,7 @@ import { clearAllUserData } from './components/user.js';
 import { setupNavigation } from './components/navigation.js';
 import { addExp } from './components/exp.js';
 import { loadingScreen } from './components/loader.js';
+import { initMusicPage } from './pages/music.js';
 
 window.clearAllUserData = clearAllUserData;
 window.addExp = addExp;
@@ -36,6 +37,12 @@ const page = scriptTag.dataset.page;
             {
                 const { initHomePage } = await import('./pages/home.js');
                 initHomePage();
+            }
+            break;
+        case 'music':
+            {
+                const { initMusicPage } = await import('./pages/music.js');
+                initMusicPage();
             }
             break;
         case 'index':
