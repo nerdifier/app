@@ -1,22 +1,10 @@
 /*=============================================
 ||                 BASIC CSS                 ||
 =============================================*/
-@font-face {
-    font-family: 'Consolas';
-    src: url(../../res/fon/Consolas.TTF) format('truetype');
-}
-@font-face {
-    font-family: 'Consolas-Bold';
-    src: url(../../res/fon/Consolas-Bold.TTF) format('truetype');
-}
-@font-face {
-    font-family: 'Consolas-Italic';
-    src: url(../../res/fon/Consolas-Italic.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Consolas-Bold-Italic';
-    src: url(../../res/fon/Consolas-Bold-Italic.ttf) format('truetype');
-}
+@font-face { font-family: 'Consolas'; src: url(../../res/fon/Consolas.TTF) format('truetype'); }
+@font-face { font-family: 'Consolas-Bold'; src: url(../../res/fon/Consolas-Bold.TTF) format('truetype'); }
+@font-face { font-family: 'Consolas-Italic'; src: url(../../res/fon/Consolas-Italic.ttf) format('truetype'); }
+@font-face { font-family: 'Consolas-Bold-Italic'; src: url(../../res/fon/Consolas-Bold-Italic.ttf) format('truetype'); }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
     color: #ebebdd;
@@ -34,13 +22,14 @@ body {
     overflow: hidden; /* Enable scrolling */
     overflow-y: hidden; /* Enable vertical scrolling */
     overflow-x: hidden; /* Disable horizontal scrolling */
-    /* scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
     flex-direction: column;
 }
 
+/* Chrome, Safari, and Opera */
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+    display: none;
     width: 0px;
 }
 
@@ -76,6 +65,14 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 /*============================================
 ||            TOP NAVIGATION BAR            ||
 ============================================*/
@@ -108,7 +105,8 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 8;
 }
 
-.menu, .user {
+.menu,
+.user {
     display: flex;
     flex-direction: column;
 }
@@ -172,8 +170,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .page {
     top: 0;
     left: 0;
-    height: calc(100% - 75.889px);
-    width: calc(100% - 75.889px);
+    height: calc(100%);
+    width: calc(100%);
     margin-top: 75px;
     margin-left: 75px;
     position: fixed;
@@ -182,22 +180,98 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .music-player {
-    height: 100%;
-    width: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #333;
-    position: sticky;
     overflow: hidden;
 }
 
 .playlists {
     height: 100%;
-    width: 60%;
-    flex-grow: 1;
-    overflow-y: scroll;
-    padding: 1rem;
+    width: 70%;
+    overflow: hidden;
 }
 
-.volume {
-    height: 100%;
-    width: 10%;
+.music-song-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    aspect-ratio: 1;
+    height: 50%;
+}
+
+.music-currently-playing-song {
+    height: 80%;
+    border-radius: 3%;
+}
+
+.music-song-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5%;
+}
+
+.music-song-name h1 {
+    margin: 0;
+}
+
+.music-scroller {
+    display: flex;
+    justify-content: center;
+}
+
+.music-progress {
+    width: 85%;
+    accent-color: #b8f;
+}
+
+.music-controls {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    aspect-ratio: 0.2;
+}
+
+.music-controls a {
+    transform: scale(0.8);
+}
+
+.music-control-button {
+    width: 20%;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.music-control-button-img {
+    transform: scale(0.6);
+    display: block;
+    margin: 0 auto;
+}
+
+.music-volume {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    width: 90%;
+
+}
+
+.volume-input {
+    margin: 1rem 0;
+    width: 80%;
+}
+
+.music-volume .bar {
+    flex: 1;
+    accent-color: #eee;
+    width: 100%;
+}
+
+.volume-icon {
+    flex-shrink: 0;
 }
