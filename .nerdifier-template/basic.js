@@ -1,5 +1,5 @@
 import { setupNavigation } from '../components/navigation.js';
 
-export function initStatsPage() {
+export function init<basic>Page() {
     setupNavigation();
 }

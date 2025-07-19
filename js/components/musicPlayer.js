@@ -46,12 +46,10 @@ export class MusicPlayer {
         this.currentIndex = index;
         this.audio.src = this._trackUrl(index);
         this.audio.load();
-        this.u.title.textContent = this._trackTitle();
-        this.u.cover.src = this._coverUrl();
+        this.refreshUI();
     }
 
     _trackTitle() {
-        // If your files have metadata-free names, just show "Track 0001" or map them.
         return `Track ${String(this.currentIndex).padStart(4, '0')}`;
     }
 
@@ -124,5 +122,14 @@ export class MusicPlayer {
         u.btnLoop.addEventListener('click', () => this.toggleLoop());
         u.range.addEventListener('input', e => this.seek(e.target.value));
         u.volumeRange.addEventListener('input', e => this.setVolume(e.target.value));
+    }
+
+    refreshUI() {
+        if (this.u.cover) {
+            this.u.cover.src = this._coverUrl();
+        }
+        if (this.u.title) {
+            this.u.title.textContent = this._trackTitle();
+        }
     }
 }

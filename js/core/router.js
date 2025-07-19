@@ -20,11 +20,12 @@ function bootstrapFragment(fragmentUrl) {
         'home.html': () => import('../pages/home.js').then(m => m.initHomePage()),
         'achievements.html': () => import('../pages/achievements.js').then(m => m.initAchievementsPage()),
         'music.html': () => import('../pages/music.js').then(m => m.initMusicPage()),
-        'profile.html': () => import('../pages/profile.js').then(m => m.initProfilePage()),
+        'timer.html': () => import('../pages/timer.js').then(m => m.initTimerPage()),
         'notes.html': () => import('../pages/notes.js').then(m => m.initNotesPage()),
         'settings.html': () => import('../pages/settings.js').then(m => m.initSettingsPage()),
         'shop.html': () => import('../pages/shop.js').then(m => m.initShopPage()),
-        'schedules.html': () => import('../pages/schedules.js').then(m => m.initSchedulesPage())
+        'schedules.html': () => import('../pages/schedules.js').then(m => m.initSchedulesPage()),
+        'stats.html': () => import('../pages/stats.js').then(m => m.initStatsPage())
     };
 
     const runner = map[fragmentUrl];
