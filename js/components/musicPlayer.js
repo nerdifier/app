@@ -14,7 +14,7 @@ export class MusicPlayer {
 
     _coverUrl() {
         return `https://cdn.jsdelivr.net/gh/nerdifier/nerdifier-playlist-` +
-            `${this.playlistNum}/${this.playlistName}/cover.svg`;
+            `${this.playlistNum}/${this.playlistName}/cover.png`;
     }
 
     _formatTime(sec) {
