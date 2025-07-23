@@ -53,7 +53,7 @@ export async function initMusicPage() {
 
 async function changePlaylist(name) {
     try {
-        const res = await fetch('res/playlists.json');
+        const res = await fetch('../../res/playlists.json');
         const playlists = await res.json();
 
         const playlistNum = playlists[name];
