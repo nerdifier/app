@@ -4,7 +4,7 @@
     <div class="logo">
         <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="50" height="50">
         <h1>Nerdifier</h1>
-        <h3 class="logo-h3">v0.0.0.8</h3>
+        <h3 class="logo-h3"><span id="version"></span></h3>
     </div>
     <div class="nav-time-notiff">
         <a id="notifications" class="topnav-icons"><img src="res\svg\sidenav\notifications.svg" alt="Notifications"
@@ -70,19 +70,21 @@
         </div>
     </div>
     <div class="playlist-section">
-        <div class="playlist-recents">
-            <div class="playlist-recent"></div>
+        <div class="playlist-recent">
+            <h2>Recent</h2>
+            <hr>
             <div class="playlist-vertical">
-                <a class="playlist-album-cover"><img></a>
-                <a class="playlist-album-cover"><img></a>
-                <a class="playlist-album-cover"><img></a>
-                <a class="playlist-album-cover"><img></a>
+                <a class="playlist-album-cover" onclick="changePlaylist('lofi')" ><img class="playlist-album-cover" src="https://cdn.jsdelivr.net/gh/nerdifier/nerdifier-playlist-1/lofi/cover.png" ></a>
+                <a class="playlist-album-cover" onclick="changePlaylist('piano')"><img class="playlist-album-cover" src="https://cdn.jsdelivr.net/gh/nerdifier/nerdifier-playlist-1/piano/cover.png"></a>
+                <!-- <a class="playlist-album-cover"><img></a>
+                <a class="playlist-album-cover"><img></a>  -->
             </div>
         </div>
-        <div>
-            <div class="playlist-latest-release"></div>
+        <div class="playlist-latest-release">
+            <h2>Latest Releases</h2>
+            <hr>
             <div class="playlist-vertical">
-                <a class="playlist-album-cover"><img></a>
+                <a class="playlist-album-cover" onclick="changePlaylist('piano')"><img class="playlist-album-cover" src="https://cdn.jsdelivr.net/gh/nerdifier/nerdifier-playlist-1/piano/cover.png"></a>
             </div>
         </div>
     </div>

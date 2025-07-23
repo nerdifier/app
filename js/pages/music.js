@@ -3,6 +3,7 @@ import { MusicPlayer } from '../components/musicPlayer.js';
 
 export async function initMusicPage() {
     setupNavigation();
+    changePlaylist();
     const page = document.getElementById('music-page');
     const audioEl = document.getElementById('audio-player');
     const ui = {
@@ -24,13 +25,22 @@ export async function initMusicPage() {
         trackCount: 100,
         ui
     });
+    const saved = JSON.parse(localStorage.getItem('musicState'));
+    window.musicPlayer = player;
+
+    if (saved && saved.playlistName) {
+        player.playlistName = saved.playlistName;
+        player.playlistNum = saved.playlistNum;
+        player.load(saved.currentIndex ?? 0);
+        player.audio.currentTime = saved.currentTime ?? 0;
+        player.refreshUI();
+    }
     if (audioEl.src === '') {
         player.load(0);
     }
     else {
         player.refreshUI();
-        player.togglePlay();
-        player.togglePlay();
+        player.play();
     }
     if (audioEl.volume) {
         ui.volumeRange.value = audioEl.volume;
@@ -40,3 +50,25 @@ export async function initMusicPage() {
     }
     player.bindUI();
 }
+
+async function changePlaylist(name) {
+    try {
+        const res = await fetch('../../res/playlists.json');
+        const playlists = await res.json();
+
+        const playlistNum = playlists[name];
+        if (!playlistNum) throw new Error('Playlist not found');
+
+        musicPlayer.playlistName = name;
+        musicPlayer.playlistNum = playlistNum;
+        musicPlayer.currentIndex = 0;
+
+        musicPlayer.load(0);
+        musicPlayer.refreshUI();
+        musicPlayer.play();
+
+    } catch (err) {
+        console.log('Failed to change playlist: ' + err);
+    }
+}
+window.changePlaylist = changePlaylist;

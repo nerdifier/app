@@ -73,6 +73,12 @@ img {
     -ms-user-select: none;
 }
 
+hr {
+    border: 0.5px solid #111;
+    width: 100%;
+    padding: 0 10px;
+}
+
 /*============================================
 ||            TOP NAVIGATION BAR            ||
 ============================================*/
@@ -187,7 +193,7 @@ img {
     overflow: hidden;
 }
 
-.playlists {
+.playlist-section {
     height: 100%;
     width: 70%;
     overflow: hidden;
@@ -274,4 +280,48 @@ img {
 
 .volume-icon {
     flex-shrink: 0;
+}
+
+.playlist-vertical {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    white-space: nowrap;
+}
+
+.playlist-album-cover {
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    width: 20%;
+    position: relative;
+}
+
+.playlist-album-cover a {
+    width: 100%; height: 100%;
+    border-radius: 3%;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+
+.playlist-album-cover img {
+    width: 100%; height: 100%;
+    border: none;
+    border-radius: 3%;
+    display: block;
+    object-fit: cover;
+    border-color: #00000000;
+}
+
+.fade {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in;
 }

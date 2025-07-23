@@ -29,6 +29,7 @@ export class MusicPlayer {
             u.range.max = audio.duration;
         });
         audio.addEventListener('timeupdate', () => {
+            this.savePlaybackState();
             u.range.value = audio.currentTime;
         });
         audio.addEventListener('ended', () => {
@@ -44,8 +45,19 @@ export class MusicPlayer {
 
     load(index = 0) {
         this.currentIndex = index;
-        this.audio.src = this._trackUrl(index);
+        const trackUrl = this._trackUrl(index);
+
+        this.audio.src = trackUrl;
         this.audio.load();
+
+        this.audio.addEventListener('canplay', () => {
+            try {
+                this.play();
+            } catch (err) {
+                console.warn('Autoplay failed:', err);
+            }
+        }, { once: true });
+
         this.refreshUI();
     }
 
@@ -62,6 +74,16 @@ export class MusicPlayer {
             this.audio.paused
                 ? './res/svg/music-player/play.svg'
                 : './res/svg/music-player/pause.svg';
+    }
+
+    savePlaybackState() {
+        const state = {
+            playlistName: this.playlistName,
+            playlistNum: this.playlistNum,
+            currentIndex: this.currentIndex,
+            currentTime: this.audio.currentTime
+        };
+        localStorage.setItem('musicState', JSON.stringify(state));
     }
 
     prev() {
@@ -126,7 +148,11 @@ export class MusicPlayer {
 
     refreshUI() {
         if (this.u.cover) {
-            this.u.cover.src = this._coverUrl();
+            this.u.cover.classList.add('fade');
+            setTimeout(() => {
+                this.u.cover.src = this._coverUrl() + '?t=' + Date.now();
+                this.u.cover.classList.remove('fade');
+            }, 100);
         }
         if (this.u.title) {
             this.u.title.textContent = this._trackTitle();

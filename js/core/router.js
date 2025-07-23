@@ -1,3 +1,5 @@
+import { updateVersion } from '../version.js';
+
 export function loadPage(fragmentUrl) {
     fetch(fragmentUrl)
         .then(res => res.text())
@@ -13,6 +15,7 @@ export function loadPage(fragmentUrl) {
             const container = document.querySelector('#page1');
             container.innerHTML = '<p>Page could not be loaded.</p>';
         });
+    updateVersion();
 }
 
 function bootstrapFragment(fragmentUrl) {
