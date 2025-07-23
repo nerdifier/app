@@ -1,0 +1,327 @@
+/*=============================================
+||                 BASIC CSS                 ||
+=============================================*/
+@font-face { font-family: 'Consolas'; src: url(../../res/fon/Consolas.TTF) format('truetype'); }
+@font-face { font-family: 'Consolas-Bold'; src: url(../../res/fon/Consolas-Bold.TTF) format('truetype'); }
+@font-face { font-family: 'Consolas-Italic'; src: url(../../res/fon/Consolas-Italic.ttf) format('truetype'); }
+@font-face { font-family: 'Consolas-Bold-Italic'; src: url(../../res/fon/Consolas-Bold-Italic.ttf) format('truetype'); }
+
+h1, h2, h3, h4, h5, h6, p, a, button {
+    color: #ebebdd;
+    font-family: 'Consolas', monospace;
+    font-weight: 699;
+}
+
+body {
+    color: unset;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid #333;
+    margin: 4px 0;
+    background-color: #000;
+    overflow: hidden; /* Enable scrolling */
+    overflow-y: hidden; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    flex-direction: column;
+}
+
+/* Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+button {
+    color: #ebebdd;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #000;
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+hr {
+    border: 0.5px solid #111;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/*============================================
+||            TOP NAVIGATION BAR            ||
+============================================*/
+.topnav {
+    width: 100%;
+    height: 75px;
+    border: 1px solid #333;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.imglogo {
+    margin: 20px calc(30px / 2) 20px 15px;
+}
+
+.logo-h3 {
+    color: #ebebdd;
+    font-family: Consolas, monospace;
+    padding-top: 20px;
+    font-size: 8;
+}
+
+.menu,
+.user {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-time-notiff {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.time {
+    color: #ebebdd;
+    font-family: Consolas, monospace;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=============================================
+||            SIDE NAVIGATION BAR            ||
+=============================================*/
+.sidenav {
+    width: 75px;
+    height: calc(100vh - 75px);
+    border: 1px solid #333;
+    background-color: #000;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidenav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #ebebdd;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #333;
+    color: #ebebdd;
+}
+
+.sidenav-icon-img {
+    transform: scale(0.75)
+}
+
+/*==============================================
+||            PAGE & OTHER CONTENT            ||
+==============================================*/
+.page {
+    top: 0;
+    left: 0;
+    height: calc(100%);
+    width: calc(100%);
+    margin-top: 75px;
+    margin-left: 75px;
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+}
+
+.music-player {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.playlist-section {
+    height: 100%;
+    width: 70%;
+    overflow: hidden;
+}
+
+.music-song-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    aspect-ratio: 1;
+    height: 50%;
+}
+
+.music-currently-playing-song {
+    height: 80%;
+    border-radius: 3%;
+}
+
+.music-song-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5%;
+}
+
+.music-song-name h1 {
+    margin: 0;
+}
+
+.music-scroller {
+    display: flex;
+    justify-content: center;
+}
+
+.music-progress {
+    width: 85%;
+    accent-color: #b8f;
+}
+
+.music-controls {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    aspect-ratio: 0.2;
+}
+
+.music-controls a {
+    transform: scale(0.8);
+}
+
+.music-control-button {
+    width: 20%;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.music-control-button-img {
+    transform: scale(0.6);
+    display: block;
+    margin: 0 auto;
+}
+
+.music-volume {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    width: 90%;
+
+}
+
+.volume-input {
+    margin: 1rem 0;
+    width: 80%;
+}
+
+.music-volume .bar {
+    flex: 1;
+    accent-color: #eee;
+    width: 100%;
+}
+
+.volume-icon {
+    flex-shrink: 0;
+}
+
+.playlist-vertical {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    white-space: nowrap;
+}
+
+.playlist-album-cover {
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    width: 20%;
+    position: relative;
+}
+
+.playlist-album-cover a {
+    width: 100%; height: 100%;
+    border-radius: 3%;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+
+.playlist-album-cover img {
+    width: 100%; height: 100%;
+    border: none;
+    border-radius: 3%;
+    display: block;
+    object-fit: cover;
+    border-color: #00000000;
+}
+
+.fade {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in;
+}

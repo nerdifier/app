@@ -10,7 +10,7 @@ export function getDonutData() {
             startAngle: -Math.PI / 2,
             data: [
                 { value: expPercent, color: '#aef359' },
-                { value: 100 - expPercent, color: '#000000' }
+                { value: 100 - expPercent, color: '#00000000' }
             ]
         },
         {

@@ -3,8 +3,9 @@ import { bootApp } from './core/init.js';
 import { clearAllUserData } from './components/user.js';
 import { setupNavigation } from './components/navigation.js';
 import { addExp } from './components/exp.js';
-import { loadingScreen } from './components/loader.js';
+import { loadingScreen, disableLoader } from './components/loader.js';
 
+window.disableLoader = disableLoader;
 window.clearAllUserData = clearAllUserData;
 window.addExp = addExp;
 
@@ -38,6 +39,12 @@ const page = scriptTag.dataset.page;
                 initHomePage();
             }
             break;
+        case 'music':
+            {
+                const { initMusicPage } = await import('./pages/music.js');
+                initMusicPage();
+            }
+            break;
         case 'index':
         default:
             {
@@ -46,4 +53,4 @@ const page = scriptTag.dataset.page;
             }
             break;
     }
-})  ();
+})();

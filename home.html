@@ -3,12 +3,6 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8QMXCQR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
 
 <link rel="stylesheet" href="./css/pages/home.css">
 
@@ -20,10 +14,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <br>
             <br>
             <span class="user-info-sub">p.s. The information is stored only in your browser unless you decide otherwise.</span></p>
-        <input type="text" id="username" placeholder="Username..." required>
+        <input type="text" id="username" placeholder="Username..." autocomplete="username" required>
         <input type="text" id="bio" placeholder="Bio...">
         <input type="text" id="education" placeholder="Institute of Education..." required>
-        <input  type="text" maxlength="2" pattern="\d{1,2}" inputmode="numeric" id="batch" placeholder="Batch..." required>
+        <input type="text" maxlength="2" pattern="\d{1,2}" inputmode="numeric" id="batch" placeholder="Batch..." required>
         <button id="save-button">Save</button>
     </div>
 </div>
@@ -32,27 +26,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="logo">
         <img class="imglogo" src="./res/svg/logo.svg" alt="Nerdifier Logo" width="50" height="50">
         <h1>Nerdifier</h1>
-        <h3 class="logo-h3">v0.0.0.8</h3>
+        <h3 class="logo-h3"><span id="version"></span></h3>
     </div>
     <div class="nav-time-notiff">
-        <a id="notifications" class="topnav-icons"><img src="res\svg\sidenav\notifications.svg" alt="Notifications" width="30" height="30"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="notifications" class="topnav-icons" title="notifications"><img src="res\svg\sidenav\notifications.svg" alt="notifications" width="30" height="30"></a>&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="time" id="currentTime"></div>
-        <a id="profileSettings" class="topnav-icons"><img class="sidenav-icon-img" src="res\svg\sidenav\profile.svg" width="42" height="42"></a>
+        <a id="profileSettings" class="topnav-icons" title="profileSettings"><img class="sidenav-icon-img" src="res\svg\sidenav\profile.svg" width="42" height="42" alt="profileSettings"></a>
     </div>
 </div>
 
 <div class="sidenav">
     <div class="menu">
-        <a id="home"        class="sidenav-icons" data-fragment="home.html"        ><img class="sidenav-icon-img" src="res\svg\sidenav\home.svg"        width="50" height="50"></a>
-        <a id="shop"        class="sidenav-icons" data-fragment="shop.html"        ><img class="sidenav-icon-img" src="res\svg\sidenav\shop.svg"        width="50" height="50"></a>
-        <a id="timer"       class="sidenav-icons" data-fragment="timer.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\timer.svg"       width="50" height="50"></a>
-        <a id="tasks"       class="sidenav-icons" data-fragment="schedules.html"   ><img class="sidenav-icon-img" src="res\svg\sidenav\schedules.svg"   width="50" height="50"></a>
-        <a id="music"       class="sidenav-icons" data-fragment="music.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\music.svg"       width="50" height="50"></a>
-        <a id="notes"       class="sidenav-icons" data-fragment="notes.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\notes.svg"       width="50" height="50"></a>
+        <a id="home"        class="sidenav-icons" data-fragment="home.html"  title="home"               ><img class="sidenav-icon-img" src="res\svg\sidenav\home.svg"        width="50" height="50" alt="home"          ></a>
+        <a id="shop"        class="sidenav-icons" data-fragment="shop.html"  title="shop"               ><img class="sidenav-icon-img" src="res\svg\sidenav\shop.svg"        width="50" height="50" alt="shop"          ></a>
+        <a id="timer"       class="sidenav-icons" data-fragment="timer.html"  title="timer"             ><img class="sidenav-icon-img" src="res\svg\sidenav\timer.svg"       width="50" height="50" alt="timer"         ></a>
+        <a id="tasks"       class="sidenav-icons" data-fragment="schedules.html" title="schedules"      ><img class="sidenav-icon-img" src="res\svg\sidenav\schedules.svg"   width="50" height="50" alt="schedules"     ></a>
+        <a id="music"       class="sidenav-icons" data-fragment="music.html"  title="music"             ><img class="sidenav-icon-img" src="res\svg\sidenav\music.svg"       width="50" height="50" alt="music"         ></a>
+        <a id="notes"       class="sidenav-icons" data-fragment="notes.html"  title="notes"             ><img class="sidenav-icon-img" src="res\svg\sidenav\notes.svg"       width="50" height="50" alt="notes"         ></a>
     </div>
     <div class="user">
-        <a id="achievements"class="sidenav-icons" data-fragment="achievements.html"><img class="sidenav-icon-img" src="res\svg\sidenav\achievements.svg"width="50" height="50"></a>
-        <a id="stats"       class="sidenav-icons" data-fragment="stats.html"       ><img class="sidenav-icon-img" src="res\svg\sidenav\stats.svg"       width="50" height="50"></a>
+        <a id="achievements"class="sidenav-icons" data-fragment="achievements.html" title="achievements"><img class="sidenav-icon-img" src="res\svg\sidenav\achievements.svg"width="50" height="50" alt="achievements"  ></a>
+        <a id="stats"       class="sidenav-icons" data-fragment="stats.html"  title="stats"             ><img class="sidenav-icon-img" src="res\svg\sidenav\stats.svg"       width="50" height="50" alt="stats"         ></a>
     </div>
 </div>
 <div class="page">
@@ -68,31 +62,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h1>Welcome, <span id="greet-user-name"></span>.</h1>
             </div> <!-- greeting -->
             <div class="level">
-                <h2><img src="./res/svg/xp-level.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;<span id="level"></span></h2>
+                <h2><img src="./res/svg/xp-level.svg" width="30px" height="30px" alt="levels">&nbsp;&nbsp;&nbsp;<span id="level"></span></h2>
             </div> <!-- level -->
             <div class="glasses">
-                <h2><img src="./res/svg/glasses.svg" width="30px" height="30px"><span id="glasses-count"></span></h2>
+                <h2><img src="./res/svg/glasses.svg" width="30px" height="30px" alt="glasses"><span id="glasses-count"></span></h2>
             </div> <!-- currency: glasses -->
         </div>
     </div> 
     <div class="page-details"> <!-- home tasks and timers container. (oriented sideways) -->
         <div class="tasks"> <!-- sidewayss -->
             <div class="ta-title">
-                <img src="res\svg\tasks\tasks.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="res\svg\tasks\tasks.svg" width="30px" height="30px" title="tasks">&nbsp;&nbsp;&nbsp;&nbsp;
                 <h2>TO - DO</h2>
             </div>
             <hr>
         </div>
         <div class="timers"> <!-- sideways -->
             <div class="ti-title">
-                <img src="res\svg\sidenav\timer.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="res\svg\sidenav\timer.svg" width="30px" height="30px" title="timer">&nbsp;&nbsp;&nbsp;&nbsp;
                 <h2>TIMERS</h2>
             </div>
             <hr>
         </div>
         <div class="music">
             <div class="mu-title">
-                <img src="res\svg\sidenav\music.svg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="res\svg\sidenav\music.svg" width="30px" height="30px" title="music">&nbsp;&nbsp;&nbsp;&nbsp;
                 <h2>MUSIC</h2>
             </div>
             <hr>

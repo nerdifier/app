@@ -3,19 +3,19 @@
 =============================================*/
 @font-face {
     font-family: 'Consolas';
-    src: url(../res/fon/Consolas.TTF) format('truetype');
+    src: url(../../res/fon/Consolas.TTF) format('truetype');
 }
 @font-face {
     font-family: 'Consolas-Bold';
-    src: url(../res/fon/Consolas-Bold.TTF) format('truetype');
+    src: url(../../res/fon/Consolas-Bold.TTF) format('truetype');
 }
 @font-face {
     font-family: 'Consolas-Italic';
-    src: url(../res/fon/Consolas-Italic.ttf) format('truetype');
+    src: url(../../res/fon/Consolas-Italic.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Consolas-Bold-Italic';
-    src: url(../res/fon/Consolas-Bold-Italic.ttf) format('truetype');
+    src: url(../../res/fon/Consolas-Bold-Italic.ttf) format('truetype');
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
@@ -32,9 +32,9 @@ body {
     margin: 4px 0;
     padding: 8px;
     background-color: #000;
-    overflow: scroll; /* Enable scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: auto; /* Disable horizontal scrolling */
+    overflow: hidden; /* Enable scrolling */
+    overflow-y: hidden; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
     scrollbar-width: 0px; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
     flex-direction: column;
@@ -58,8 +58,8 @@ button {
 }
 
 input[type="number"] {
-    appearance: textfield;
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -166,6 +166,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 100vh;
     top: 0; left: 0;
     position: fixed;
+    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
     z-index: 9998;
     background: #ffeeff22;
